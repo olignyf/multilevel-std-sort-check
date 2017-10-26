@@ -21,12 +21,14 @@ bool sortCustom(sampler a, sampler b)
 {
 	if (a.a < b.a)
 		return true;
-  // without the following line it fails the test case below, uncomment to fix
-	//else if (a.a > b.a)
+        // without the following line it fails the test case below, uncomment to fix
+	// else if (a.a > b.a)
 	//	return false;
 
 	if (a.b < b.b)
 		return true;
+	else if (a.b > b.b)
+		return false;
 
 	if (a.c < b.c)
 		return true;
