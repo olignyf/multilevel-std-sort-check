@@ -39,19 +39,12 @@ bool sortCustom(sampler a, sampler b)
 int main()
 {
 	sampler sampl[4];
-	sampl[0].a = 4;
-	sampl[1].a = 3;
-	sampl[2].a = 1;
-	sampl[3].a = 2;
-	sampl[0].b = 4;
-	sampl[1].b = 3;
-	sampl[2].b = 2;
-	sampl[3].b = 1;
-	sampl[0].c = 1;
-	sampl[1].c = 2;
-	sampl[2].c = 3;
-	sampl[3].c = 4;
-	std::sort(sampl, sampl + 4, sortCustom);
+	sampl[0].a = 4; sampl[1].a = 3; sampl[2].a = 1; sampl[3].a = 2;
+	sampl[0].b = 4; sampl[1].b = 3; sampl[2].b = 2; sampl[3].b = 1;
+	sampl[0].c = 1; sampl[1].c = 2; sampl[2].c = 3; sampl[3].c = 4;
+	
+	int ssize = sizeof(sampl) / sizeof(sampl[0]);
+	std::sort(sampl, sampl + ssize, sortCustom);
 	for (auto &x : sampl)
 	{
 		printf("a: %d, b: %d, c:%d\n", x.a, x.b, x.c);
